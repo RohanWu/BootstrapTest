@@ -2,16 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-            
-        <title>Theme Template for Bootstrap</title>
-                                
-        <link href="bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="CSS.css" rel="stylesheet">
-                                            
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="THIS IS FOR NCCUCS WEB PROGRAMMING.">
+                    <meta name="author" content="RohanWu">
+                        <title>HTML5 Revision (NCCUCS)</title>
+                        <link href="bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+                        <link href="bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+                            <link href="CSS.css" rel="stylesheet">
     </head>
     
     <body>
@@ -20,42 +17,143 @@
         <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
         <script src="bootstrap-3.1.1-dist/js/docs.min.js"></script>
       
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="https://www.lttc.ntu.edu.tw/index.aspx">LTTC</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="https://www.lttc.ntu.edu.tw/lttc_news_all.aspx">最新消息</a></li>
+                      <li><a href="https://www.lttc-li.org.tw/">課程</a></li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">測驗<b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Another action</a></li>
+                              <li><a href="#">Something else here</a></li>
+                              <li class="divider"></li>
+                              <li class="dropdown-header">Nav header</li>
+                              <li><a href="#">Separated link</a></li>
+                              <li><a href="#">One more separated link</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="#">資源</a></li>
+                      <li><a href="#">獎助學金</a></li>
+                      <li><a href="#">Research＆Grants</a></li>
+                      <li><a href="#">活動報導</a></li>
+                      <li><a href="https://eshop.lttc.org.tw/">e購網</a></li>
+                  </ul>
+                  <form class="navbar-form navbar-right">
+                      <input type="text" class="form-control" placeholder="全文檢索">
+                          </form>
+              </div>
+          </div>
+      </nav>
+    
+
+<div class="container-fluid">
+    <div class="row">
+        
+        <aside class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_news.aspx">最新消息</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/GRE.htm">測驗簡介</a></li>
+                <li class="active"><a href="https://www.lttc.ntu.edu.tw/gre_content.htm">測驗題型</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_dates.htm">測驗場次</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_location.htm">考場資訊</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_registration.htm">報名須知</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_refund.htm">改期/取消</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_pre_test.htm">應試須知</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_score_report.htm">成績報告</a></li>
+                <li><a href="#">常見問答</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA.htm">&nbsp;&nbsp;&nbsp;報名</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_1.htm">&nbsp;&nbsp;&nbsp;改期/取消</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_2.htm">&nbsp;&nbsp;&nbsp;信用卡/扣款問題</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_3.htm">&nbsp;&nbsp;&nbsp;試場</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_4.htm">&nbsp;&nbsp;&nbsp;證件</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_5.htm">&nbsp;&nbsp;&nbsp;測驗當日</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_6.htm">&nbsp;&nbsp;&nbsp;成績</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_QA_7.htm">&nbsp;&nbsp;&nbsp;其他</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/gre_pub.htm">相關網站</a></li>
+                <li><a href="https://www.lttc.ntu.edu.tw/contactus.htm">聯絡我們</a></li>
+            </ul>
+        </aside>
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             
-            <div class="container">
-                
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Bootstrap theme</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
+            <header>
+                <img class="img-rounded" src="page_blue_01.jpg" width="1120" alt="LTTC photo">
+                    <br />
+                    </header>
+            
+            <section>
+                <br />
+                <a class="flat" href="https://www.lttc.ntu.edu.tw/index.aspx">首頁</a>
+                <p class="flat">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</p>
+                <a class="flat" href="https://www.lttc.ntu.edu.tw/testbypurpose.htm">測驗</a>
+                <p class="flat">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</p>
+                <a class="flat" href="https://www.lttc.ntu.edu.tw/gre.htm">GRE®測驗(The GRE® revised General Test)</a>
+                <p class="flat">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</p>
+                <a class="flat" href="https://www.lttc.ntu.edu.tw/gre_content.htm">測驗題型</a>
+                <br />
+                <hr />
+            </section>
+            
+            <article>
+                <h2>測驗題型</h2>
+                <p><span>測驗共分6個Section，全程約需4.5小時，測驗程序如下：</span>（除寫作外，語文及計量出現的次序不固定）</p>
+                <ol>
+                    <li>兩篇寫作<span>（各30分鐘作答）</span></li>
+                    <li>語文 (Verbal Reasoning)一個部分<span>（30分鐘作答）</span></li>
+                    <li>計量 (Quantitative Reasoning)一個部分<span>（35分鐘作答）</span></li>
+                    <li><span>------- 10分鐘的休息時間（非強制性 ）-------</span></li>
+                    <li>語文 (Verbal Reasoning)一個部分<span>（30分鐘作答）</span></li>
+                    <li>計量 (Quantitative Reasoning)一個部分<span>（35分鐘作答）</span></li>
+                    <li>再一個Verbal 或 Quantitative<span>（30 或 35分鐘作答）</span></li>
+                </ol>
+                <h4>各項測驗說明如下：</h4>
+                <ol>
+                    <li><span>分析寫作(Analytical Writing)有兩篇</span>，只能使用電腦打字。
+                        <ul>
+                            <li>一篇Analyze an Issue，30分鐘作答，</li>
+                            <li>一篇Analyze an Argument，30分鐘作答。</li>
+                        </ul>
+                    </li>
+                    <li><span>語文 (Verbal Reasoning)-- 包含兩個部分</span>，每部分 20題，30分鐘作答。</li>
+                    <li>
+                        <span>計量 (Quantitative Reasoning)-- 包含兩個部分</span>，每部分 20題，35分鐘作答。<br />
+                        <span>考計量時，螢幕上有計算機可使用</span>
+                    </li>
+                </ol>
+                <p>
+                三項測驗皆可使用擬稿紙與筆，但需在<span>計時當中（即看到題目時）</span>，才可使用紙筆擬稿或計算。<br />
+                另可能有不計分之Unidentified Section (Verbal或Quantitative)，亦需作答。
+                </p>
+                <br />
+                <br />
+            </article>
+            
+            <footer>
+                <p>
+                地址：10663 台北市辛亥路2段170號 (臺灣大學校總區內)&nbsp;<a href="https://www.lttc.ntu.edu.tw/lttcmap_pdf.pdf" target="_blank"><img src="mpaicon.png" alt="Map location"></a><br />
+                郵政信箱：台北郵政第 23-41 號信箱<br />
+                電話：(02)2362-6385 傳真：(02)2367-1944<br />
+                辦公時間：週一至週五上午8~12點、下午1~5點<br />
+                </p>
+            </footer>
+            
             
         </div>
-    
+    </div>
+</div>
+
+
     </body>
 </html>
