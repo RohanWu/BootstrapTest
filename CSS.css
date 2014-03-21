@@ -19,6 +19,10 @@ article ol ol {
     margin: 0 0 0 2em;
 }
 
+.block_width {
+    width: 500px;
+}
+
 
 .rectangle-list a{
     position: relative;
