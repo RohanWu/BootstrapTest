@@ -24,7 +24,7 @@ article ol ol {
 }
 
 
-.rectangle-list a{
+.rectangle-list li{
     position: relative;
     display: block;
     padding: .4em .4em .4em .8em;
@@ -35,10 +35,10 @@ article ol ol {
     text-decoration: none;
     transition: all .3s ease-out;   
 }
-.rectangle-list a:hover{
+.rectangle-list li:hover{
     background: #eee;
 }
-.rectangle-list a:before{
+.rectangle-list li:before{
     content: counter(li);
     counter-increment: li;
     position: absolute; 
@@ -52,7 +52,7 @@ article ol ol {
     text-align: center;
     font-weight: bold;
 }
-.rectangle-list a:after{
+.rectangle-list li:after{
     position: absolute; 
     content: '';
     border: .5em solid transparent;
@@ -61,9 +61,49 @@ article ol ol {
     margin-top: -.5em;
     transition: all .3s ease-out;               
 }
-.rectangle-list a:hover:after{
+.rectangle-list li:hover:after{
     left: -.5em;
     border-left-color: #fa8072;             
+}
+
+
+.rounded-list p{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;   
+}
+
+.rounded-list p:hover{
+    background: #eee;
+}
+
+.rounded-list p:hover:before{
+    transform: rotate(360deg);  
+}
+
+.rounded-list p:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
 }
 
 
