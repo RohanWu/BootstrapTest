@@ -160,6 +160,10 @@ article .rectangle-list li:hover:after{
     left: -.5em;
     border-left-color: #fa8072;             
 }
+. block_width {
+    width: 500px;
+}
+
 
 
 
