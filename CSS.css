@@ -161,7 +161,7 @@ article .rectangle-list a:hover:after{
     border-left-color: #fa8072;             
 }
 article .block_width {
-    width: 500px;
+    width: auto;
 }
 
 
