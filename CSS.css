@@ -67,7 +67,7 @@ article ol ol {
 }
 
 
-.rounded-list p{
+.rounded-list li{
     position: relative;
     display: block;
     padding: .4em .4em .4em 2em;
@@ -80,15 +80,15 @@ article ol ol {
     transition: all .3s ease-out;   
 }
 
-.rounded-list p:hover{
+.rounded-list li:hover{
     background: #eee;
 }
 
-.rounded-list p:hover:before{
+.rounded-list li:hover:before{
     transform: rotate(360deg);  
 }
 
-.rounded-list p:before{
+.rounded-list li:before{
     content: counter(li);
     counter-increment: li;
     position: absolute; 
