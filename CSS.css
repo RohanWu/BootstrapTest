@@ -24,6 +24,7 @@ body {
 
 .wellknown {
     margin-top: 30px;
+    width: 960px;
     background: #f9f9f9;
 	border-right: 5px solid #ccc;
 	font-family: Hoefler Text, Times New Roman, Cambria; 
