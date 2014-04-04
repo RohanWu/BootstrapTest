@@ -33,50 +33,110 @@
             <headr class="grid_12">
                 <div class="jumbotron">
                     <h1>Sign up the format</h1>
-                    <p>According to this section, you are wellcome to write down all you want to say, or choose the proper answer on your own.</p>
+                    <p>According to this section, you are wellcome to write down all you want to say, or choose the proper answer on your own :)</p>
                 </div>
             </header>
         
             <article class="grid_12">
                 
-                <div class="grid_6 alpha">
+                <form class="form-horizontal" role="form" action="https://docs.google.com/spreadsheet/formResponse?formkey=dDZ3dGNNLVFBTjR4bktTNGhQVEFfa3c6MA&amp;ifq" method="POST">
+                
+                    <div class="grid_6 alpha">
                     
-                    <form class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">ID</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <label class="col-sm-2 control-label" for="input_ID">ID</label>
+                            <div class="col-sm-7">
+                                <input class="form-control" type="txt" placeholder="I'm empty." name="entry.0.single" value="100703052">
                             </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                                    </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <div class="checkbox">
+                            <label class="col-sm-2 control-label" for="input_Gender">Gender</label>
+                            <div class="col-sm-7">
+                                <div class="radio">
                                     <label>
-                                        <input type="checkbox"> Remember me
-                                            </label>
+                                        <input type="radio" name="entry.1.group" value="Boy" checked>
+                                        Boy
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="entry.1.group" value="Girl">
+                                        Girl
+                                    </label>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Sign in</button>
+                            <label class="col-sm-2 control-label" for="input_FavoriteFoods">Favorite Foods</label>
+                            <div class="col-sm-7">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="entry.2.group">
+                                        Apple
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="entry.2.group">
+                                        Banana
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="entry.2.group">
+                                        Lemon
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="entry.2.group">
+                                        Watermelon
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                    
+                        
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="input_Relationship">Relation</label>
+                            <div class="col-sm-7">
+                                <select class="form-control" name="entry.3.single">
+                                    <option>single</option>
+                                    <option>dating</option>
+                                    <option>married</option>
+                                    <option>hard to explain</option>
+                                </select>
+                            </div>
+                        </div>
                                             
-                </div>
+                    </div>
       
-                <div class="grid_6 omega">
+                    <div class="grid_6 omega">
+                    
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="input_Email">Email</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="txt" placeholder="Don't forget me" name="entry.4.single">
+                            </div>
+                        </div>
+                   
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="input_Email">Comments</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="5" placeholder="Come on~ fill me, baby" name="entry.5.single" ></textarea>
+                            </div>
+                        </div>
                 
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button class="btn btn-default" type="submit">提交</button>
+                            </div>
+                        </div>
                 
-                </div>
+                    </div>
+      
+                </form>
       
             </article>
         
