@@ -22,7 +22,12 @@ body {
 }
 
 
-.wellknown {
+section .position {
+    text-align:right;
+}
+
+
+article .wellknown {
     margin-top: 30px;
     width: 960px;
     background: #f9f9f9;
