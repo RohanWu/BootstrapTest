@@ -47,9 +47,11 @@
                 }, function(response){
                         if (response && response.post_id) {
                             alert('Post was published.');
+                            statusChangeCallback(response);
                         } 
                         else {
                             alert('Post was not published.');
+                            statusChangeCallback(response);
                         }
                     }
                 );
