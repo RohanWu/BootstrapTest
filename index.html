@@ -13,9 +13,7 @@
         <meta property="og:url" content="http://rohanwu.github.io/wp2014s_hw4">
         <meta property="og:description" content="Wonder whether your photo is awesome or awful? Visit it, and you will get the door.">
         <!-- ENDBLOCK: FB OGP -->
-        <!--
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-        -->
+    
         <link rel="stylesheet" href="css/style.css">
         
         <title>HTML5 Canvas with Facebook</title>
@@ -27,28 +25,102 @@
 
     <body>
         
+        <!-- BLOCK: FB SDK initialization -->
         <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function() {
+                // Initialize the FB JS SDK
+                FB.init({
+                    appId      : '1458954511014492',    // App ID from the app dashboard
+                    status     : true,                  // Check Facebook Login status
+                    xfbml      : true,                  // Look for social plugins on the page
+                    version    : 'v2.0'
+                });
+                
+                // Share dialog
+                FB.ui({
+                    method: 'share_open_graph',
+                    action_type: 'og.likes',
+                    action_properties: JSON.stringify({
+                        object:'https://developers.facebook.com/docs/',
+                    })
+                }, 
+                function(response){
+                    if (response && response.post_id) {
+                        alert('Post was published.');
+                    } 
+                    else {
+                        alert('Post was not published.');
+                    }
+                });
+
+                // Additional initialization code such as adding Event Listeners goes here
+                window.fbLoaded();
+            };
+
+            // Load the SDK asynchronously
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1458954511014492&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        
+            window.fbLoaded = function(){
+                // define the events when login status changed.
+                FB.Event.subscribe('auth.login', function(response) {
+                    // when user has been logged in, this block will be triggered.
+                    var msg = "You're logged in.";
+                    $("#my-login-message").html(msg);
+                    console.log("Your login response:");
+                    console.log(response);
+
+                    // fetch the profile
+                    fetch_my_profile();
+                });
+
+                // define the action when user clicked the login button.
+                $("#my-login-button").click(function(){
+                    FB.login();
+                });
+
+                var fetch_my_profile = function () {
+                    // Fetching profile picture from Facebook.
+                    FB.api('/me/picture?width=250', function(response) {
+                        var my_picture_url = response.data.url;
+                        $("#my-profile-picture").attr('src', my_picture_url);
+                    });
+                };
+            };
+        </script>
+        <!-- ENDBLOCK: FB SDK initialization -->
 
         <section id="main">
             <h2>This is a HTML5 Canvas Pages with Facebook</h2>
         
             <!-- BLOCK: Button for login to Facebook -->
             <div>
-                <button id="my-login-button" class="btn btn-primary">Login with Facebook</button>
+                <button id="my-login-button">Login with Facebook</button>
                 <p id="my-login-message"></p>
             </div>
             <!-- ENDBLOCK: Button for login to Facebook -->
+
+            <!-- BLOCK: Profile Area -->
+            <div>
+                <img id="my-profile-picture" alt="Your Photo">
+            </div>
+            <!-- ENDBLOCK: Profile Area -->
 
             <canvas width="540" height="540" id="canvas"></canvas>
 
             <!-- BLOCK: Social Plugins -->
             <div>
                 <!-- Like and Share-->
-                <div class="fb-like" data-href="https://www.facebook.com" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-                <br/>
+                <div class="fb-like" data-href="http://rohanwu.github.io/BootstrapTest/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
                 <!-- Comments -->
-                <div class="fb-comments" data-href="https://www.facebook.com" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="http://rohanwu.github.io/BootstrapTest/" data-numposts="5" data-colorscheme="light"></div>
             </div>
             <!-- ENDBLOCK: Social Plugins -->
 
