@@ -37,7 +37,7 @@
                     xfbml      : true,                  // Look for social plugins on the page
                     version    : 'v2.0'
                 });
-                
+                /*
                 FB.ui({
                     method: 'share_open_graph',
                     action_type: 'og.likes',
@@ -47,15 +47,13 @@
                 }, function(response){
                         if (response && response.post_id) {
                             alert('Post was published.');
-                            statusChangeCallback(response);
                         } 
                         else {
                             alert('Post was not published.');
-                            statusChangeCallback(response);
                         }
                     }
                 );
-                
+                */
                 // Additional initialization code such as adding Event Listeners goes here
                 FB.getLoginStatus(function(response) {
                     statusChangeCallback(response);
@@ -71,6 +69,13 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         
+            function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+
             function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
                 console.log(response);
@@ -78,6 +83,7 @@
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
                     photoAPI();
+                    document.getElementById('status').innerHTML = 'Good!';
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
                     document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
@@ -100,6 +106,9 @@
         <section id="main">
             <h2>This is a HTML5 Canvas Pages with Facebook</h2>
         
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
             <div id="status"></div>
 
             <!-- BLOCK: Profile Area -->
