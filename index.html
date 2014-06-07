@@ -47,15 +47,11 @@
                 }, function(response){
                         if (response && response.post_id) {
                             alert('Post was published.');
-                            FB.getLoginStatus(function(response) {
-                                statusChangeCallback(response);
-                            });
+                           // statusChangeCallback(response);
                         } 
                         else {
                             alert('Post was not published.');
-                            FB.getLoginStatus(function(response) {
-                                statusChangeCallback(response);
-                            });
+                         //   statusChangeCallback(response);
                         }
                     }
                 );
@@ -104,6 +100,8 @@
         <section id="main">
             <h2>This is a HTML5 Canvas Pages with Facebook</h2>
         
+            <div id="status"></div>
+
             <!-- BLOCK: Profile Area -->
             <div>
                 <img id="my-profile-picture" alt="Your Photo">
