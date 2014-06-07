@@ -69,29 +69,28 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         
-            function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-
-
             function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
                 console.log(response);
+                
                 // The response object is returned with a status field that lets the app know the current login status of the person.
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
                     photoAPI();
-                    document.getElementById('status').innerHTML = 'Good!';
+                    document.getElementById('status').innerHTML = '';
                 } else if (response.status === 'not_authorized') {
                     // The person is logged into Facebook, but not your app.
                     document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
                 } else {
-                    // The person is not logged into Facebook, so we're not sure if
-                    // they are logged into this app or not.
+                    // The person is not logged into Facebook.
                     document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
                 }
+            }
+
+            function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
             }
 
             function photoAPI() {
@@ -106,8 +105,7 @@
         <section id="main">
             <h2>This is a HTML5 Canvas Pages with Facebook</h2>
         
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 
             <div id="status"></div>
 
