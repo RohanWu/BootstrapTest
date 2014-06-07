@@ -87,10 +87,13 @@
 
                 var fetch_my_profile = function () {
                     // Fetching profile picture from Facebook.
-                    FB.api('/me/picture?width=250', function(response) {
-                        var my_picture_url = response.data.url;
-                        $("#my-profile-picture").attr('src', my_picture_url);
-                    });
+                    
+                    FB.login(function(){
+                        FB.api('/me/picture?width=250', function(response) {
+                            var my_picture_url = response.data.url;
+                            $("#my-profile-picture").attr('src', my_picture_url);
+                        });
+                    }, {scope: 'publish_actions'});
                 };
             };
         </script>
