@@ -37,23 +37,6 @@
                     version    : 'v2.0'
                 });
                 
-                // Share dialog
-                FB.ui({
-                    method: 'share_open_graph',
-                    action_type: 'og.likes',
-                    action_properties: JSON.stringify({
-                        object:'https://developers.facebook.com/docs/',
-                    })
-                }, 
-                function(response){
-                    if (response && response.post_id) {
-                        alert('Post was published.');
-                    } 
-                    else {
-                        alert('Post was not published.');
-                    }
-                });
-                
                 // Additional initialization code such as adding Event Listeners goes here
                 window.fbLoaded();
             };
