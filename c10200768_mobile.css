@@ -1,0 +1,85 @@
+body{
+  padding:2em 3em 3em 2em;
+  font-size:30px;
+  background-image: url("http://subtlepatterns.com/patterns/lightpaperfibers.png");
+  font-family:'微軟正黑體', 'Lato', Calibri, Arial, sans-serif;
+}
+
+
+h-1{
+  font-weight:bold;
+}
+
+
+h_1, h_2,h_3,h{
+  font-weight:bold;
+  font-size: 24px;
+}
+
+h1{
+  font-weight:bold;
+  font-size: 40px;
+}
+
+h2{
+   font-weight:bold;
+  font-size: 38px;
+}
+
+.top{
+ vertical-align: middle;
+ padding: 1em 0em;
+}
+
+
+
+#report_name{
+  text-align:center;
+  font-size: 50px;
+}
+
+h-1{
+  font-size: 45px;
+}
+
+#report_other{
+  text-align:center;
+  font-size:36px;
+}
+
+#go_back{
+  padding:0em 1em;
+  float:right; 
+  font-size: 30px;
+}
+
+
+a:link{
+  text-decoration: none;
+  color:black;
+}
+
+a:visited{
+  color:grey;
+}
+
+
+.copyrights{
+  font size:18px;
+  text-align:center;
+}
+
+.more {
+      display: none;
+       text-decoration: solid;
+       color: black;
+     }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: black;
+      padding-left: 8px;
+      }
+
+   a.showLink:hover, a.hideLink:hover {
+      text-decoration: dotted;
+      color: black; }

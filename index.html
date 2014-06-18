@@ -1,74 +1,237 @@
-
-<!DOCTYPE html>
+﻿
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <meta name="description" content="THIS IS FOR NCCUCS WEB PROGRAMMING.">
-        <!-- BLOCK: FB OGP -->
-        <meta property="og:title" content="Canvas with FB, the Extrodinary one">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="Yours">
-        <meta property="og:url" content="http://rohanwu.github.io/wp2014s_hw4">
-        <meta property="og:description" content="Wonder whether your photo is awesome or awful? Visit it, and you will get the door.">
-        <!-- ENDBLOCK: FB OGP -->
-    
-        <link rel="stylesheet" href="css/style.css">
-        
-        <title>HTML5 Canvas with Facebook</title>
-        
-        <style>
-            #canvas {border: 3px solid grey;}
-        </style>
-    </head>
 
-    <body>
-        
-        <!-- BLOCK: FB SDK initialization -->
-        <div id="fb-root"></div>
-        <!-- FB Javascript -->
-        <!-- ENDBLOCK: FB SDK initialization -->
+<head>
+  <!--
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta property="og:title" content="C10200768-國際護理協會四年期大會健康照護的公平性與可近性" />
+  <meta property="og:description" content="" />
+  <title>C10200768-國際護理協會四年期大會健康照護的公平性與可近性</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-        <section id="main">
-            <h2>This is a HTML5 Canvas Pages with Facebook</h2>
-        
-            <!-- BLOCK: Button for login to Facebook -->
-            <fb:login-button scope="public_profile, email, user_friends" onlogin="checkLoginState();"></fb:login-button>
-            <div id="status"></div>
-            <!-- ENDBLOCK: Button for login to Facebook -->
+  <link href="http://report.nat.g0v.tw/includes/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://report.nat.g0v.tw/includes/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="http://report.nat.g0v.tw/includes/templtes/02/css/basic.css" rel="stylesheet">
+  
+  <!-- Media Query -->
+  <link rel="stylesheet" type="text/css" href="c10200768.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="c10200768_mobile.css" media="screen and (max-device-width: 480px)">
+  <link rel="stylesheet" type="text/css" href="c10200768_mobile.css" media="screen and (max-width: 767px)">
+  <!-- END -->
 
-            <!-- BLOCK: Profile Area -->
-            <img id="my-profile-picture" alt="Your Photo">
-            <canvas id="canvas" width="540" height="540"></canvas>
-            <!-- ENDBLOCK: Profile Area -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+  <script src="http://report.nat.g0v.tw/includes/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script> 
 
-            <!-- BLOCK: Social Plugins -->
-            <div>
-                <!-- Like and Share-->
-                <div class="fb-like" data-href="http://rohanwu.github.io/BootstrapTest/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+  <script language="javascript" type="text/javascript">
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script> 
 
-                <!-- Comments -->
-                <div class="fb-comments" data-href="http://rohanwu.github.io/BootstrapTest/" data-numposts="5" data-colorscheme="light"></div>
-            </div>
-            <!-- ENDBLOCK: Social Plugins -->
+<script language="javascript" type="text/javascript">
+function showHide_2(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script> 
 
-        </section>
-    
-        <div class="inputtext" style="width:600px; margin:0 auto;">
-            <label for="inputed">輸入客製化文字：
-                <textarea name="inputed" maxlength="6" id="inputed" placeholder="限輸6字"></textarea><!-- 提供使用者輸入文字欄-->
-            </label>
-            <br/>
-            <button id="sentimg" onClick="PostImageToFacebook()">Post to Facebook</button><!-- 傳送按鈕-->
+<script language="javascript" type="text/javascript">
+function s(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script> 
+   
+</head>
+  
+  
+  
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container"> 
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://report.nat.g0v.tw/">公務人員出國考察網</a></div> 
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">中央政府<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://report.nat.g0v.tw/report/">報告查找</a></li>
+            <li><a href="http://report.nat.g0v.tw/category/">主題分類</a></li>
+            <li><a href="http://report.nat.g0v.tw/category/catetype/">施政分類</a></li>                                                       
+            <li><a href="http://report.nat.g0v.tw/timeline/">時間查找</a></li>
+            <li><a href="http://report.nat.g0v.tw/country/">國家統計</a></li> 
+            <li><a href="http://report.nat.g0v.tw/authority/">部會分類</a></li>
+            <li><a href="http://report.nat.g0v.tw/abroad/">出國人員</a></li></ul>
+        </li>
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">地方政府<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">台北市</a></li>
+                        <li><a href="#">新北市</a></li>
+                        <li><a href="#">台中市</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    
-        <div class="info"></div><!-- 訊息欄位-->
+   
+    </div>
+</nav>
 
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script src="js/script.js"></script>
+<section class="container_12">
 
-    </body>
+  <div class="top">
+    <span id= "go_back">
+    <a href = "http://report.nat.g0v.tw/report/lists/"><img src="http://imageshack.com/a/img845/386/ptdl.png" width="25" height="25"> &nbsp 前一頁</a></span>
+    <br>
+    <br>
+    <br>
+    <span id="report_name" ><h-1>報告名稱</h-1><br>國際護理協會四年期大會健康照護的公平性與可近性</span>        
+    <br>
+  </div>
+  <span id="report_other"><h_1>計劃名稱：</h_1>赴澳洲出席國際會議 <br><h_2>出國期間：</h_2>2013-05-15 至 2013-05-24 <br><h_3>參訪機關：</h_3>澳洲墨爾本(Melbourne,Australia)</span>
+  <br>
+  <br>
+  <hr>
+  <span id ="destination"><h> 前往地區：</h>澳大利亞</span>
+
+  <div id="map-canvas">
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+    <script type="text/javascript" src="http://report.nat.g0v.tw/includes/mapper.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      try{
+        COUNTRYMapper.initializeMap("map-canvas",2);
+        var countryArray = ["澳大利亞",];
+        COUNTRYMapper.addCOUNTRYArray(countryArray);
+      } catch(e){
+
+      }});
+    </script>
+  </div>
+      
+<style>
+  #map-canvas {
+    padding:1em;
+    width: 80%;
+    height:40%;
+}
+  }
+</style>    
+
+
+<div id="report_information">
+  <h1><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">▼ 報告資料</a><hr></h1>
+  <div id="example" class="more">
+    <span>
+      <h1><a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">▲ 報告資料</a></h1>
+      <hr>
+      <h2>報告日期</h2>
+      <p>2013-08-27</p>
+      <h2>報告摘要</h2>
+      <p>今年第25屆四年一次的大會(TheICN25thQuadrennialCongress),延續之前的議題繼續縮短差距、彌平落差,建立公平與可近的健康照護。整合實證、經驗、以及創新,護理人員有共同為社區與個人的健康照護增強其公平性與可近性的重要角色。為全球人民健康共同努力,此次會議以此為主軸,提供全球性平台,分享最新護理知識、跨專科、文化與國家間的領導協調。專題演講與分場報告皆是從眾多具競爭性投稿中精心篩選出來優秀的論文摘要。本人此次能在眾多摘要中獲選為口頭報告,為國爭光,深感榮耀。此次與會共計將近4000人,來自超過100個國家的護理人員,能為國為校站在國際舞台分享本人國防醫學研究成果,深感國家栽培與孕育人才之前瞻與帶領,因為101年國防部鼓勵發展有關創傷後症候群(post-traumaticstressdisorder,PTSD)之整合性研究計畫,因此,正符合ICN主題之一的災難護理(DisasterNursing),每次皆能在災難護理場次,有來自台灣的論文發表,與世界同步的護理科學研究,在國際上擠身一席,實在是深感榮幸。</p>
+      <h2>電子全文檔</h2>
+      <a href="http://report.nat.gov.tw/ReportFront/report_download.jspx?sysId=C10200768&fileNo=001" target="_blank" title="C10200768_1.doc">C10200768_1.doc</a>                           
+      <h2>原始頁面</h2>
+      <a href="http://report.nat.gov.tw/ReportFront/report_detail.jspx?sysId=C10200768" target="_blank">http://report.nat.gov.tw/ReportFront/report_detail.jspx?sysId=C10200768</a>
+      <h2>關鍵詞</h2>
+      <p>提升進階與改善健康照護的公平性與可近性。展現護理專業對個人,家庭,與社區健康之貢獻。提供機會讓來自世界各地的護理專家深度交換經驗</p>
+   </span>
+  </div>
+</div>  
+
+
+<div id="other_information">
+  <h1><a href="#" id="eg-show" class="showLink" onclick="showHide_2('eg');return false;">▼ 相關資料</a><hr></h1>
+  <div id="eg" class="more">
+    <span>
+      <h1><a href="#" id="eg-hide" class="hideLink" onclick="showHide_2('eg');return false;">▲ 相關資料</a></h1>
+      <hr>
+      <h2 >系統識別號</h2>
+      <p>c10200768</p>
+      <h2>主題分類</h2>
+      <p>衛生福利勞動</p>
+      <h2>施政分類</h2>
+      <p>國防及退伍軍人</p>
+      <h2>出國類別</h2>
+      <p>其他</p>
+   </span>
+  </div>
+</div>
+         
+
+<div id="institution_information">
+  <h1><a href="#" id="e-show" class="showLink" onclick="s('e');return false;">▼ 計畫主辦機關資訊</a><hr></h1>
+  <div id="e" class="more">
+    <span>
+      <h1><a href="#" id="e-hide" class="hideLink" onclick="s('e');return false;">▲ 計畫主辦機關資訊</a></h1>
+      <hr>
+      <h2>計畫主辦機關</h2>
+      <p>國防部</p>
+      <h2>出國人數</h2>
+      <p>共 1 位</p>
+      <h2>出國人員</h2>
+      <table cellspacing='0' width="50%">
+        <tr>
+          <th scope="col" class="aLeft">姓名</th>
+          <th scope="col" class="aLeft">服務機關</th>
+          <th scope="col" class="aLeft">服務單位</th>
+          <th scope="col" class="aLeft">職稱</th>
+          <th scope="col" class="aLeft">官職等 </th>
+        </tr>
+        <tr>
+          <td>蔣立琦</td>
+          <td>國防部軍醫局</td>
+          <td>國防醫學院</td>
+          <td>教師</td>
+          <td>教師</td>
+       </tr>         
+     </table>              
+   </span>
+  </div>
+</div>
+
+
+<div class="copyrights">
+  <hr>
+  2013  © 公務員出國考察追蹤網  ||  本來源以 <a href="//report.nat.gov.tw/" target="_blank" title="公務出國報告資訊網">公務出國報告資訊網</a> 頒佈為準，資料僅供參考，若有不正確之處請來信（<a href="mailto:abroadplay@groups.facebook.com">abroadplay@groups.facebook.com</a>）與我們反應。 <br/><p class="footer">Page rendered in <strong>0.0902</strong> seconds</p></div> 
+
+</section>
+
+</body>
 
 </html>

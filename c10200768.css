@@ -1,0 +1,72 @@
+
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/reset.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/960.css);
+@import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/text.css);
+
+body{
+  background-image: url("http://subtlepatterns.com/patterns/squared_metal.png"); 
+  background-repeat:repeat; 
+  padding-top: 80px;
+  font-family:'微軟正黑體', 'Lato', Calibri, Arial, sans-serif;
+}
+
+
+.container_12{
+  vertical-align: middle;
+  text-align:center;
+  margin: 0.5% 20%;
+  padding: 1em 5em;
+  box-shadow:1px 4px 12px -2px rgba(20%,20%,40%,0.5);
+  background-image: url("http://subtlepatterns.com/patterns/lightpaperfibers.png");
+  background-repeat: repeat; 
+
+}
+
+
+h_1, h_2,h_3,h{
+  font-weight:bold;
+  font-size: 16px;
+}
+
+
+
+.top{
+ vertical-align: middle;
+ padding: 1em 0em;
+}
+
+
+
+#report_name{
+  text-align:center;
+  font-size: 26px;
+}
+
+h-1{
+  font-size: 18px;
+}
+
+#report_other{
+  text-align:center;
+  font-size:14px;
+}
+
+#go_back{
+  float:right; 
+  font-size: 16px;
+}
+
+
+a:link{
+  text-decoration: none;
+  color:black;
+}
+
+a:visited{
+  color:grey;
+}
+
+
+.copyrights{
+  text-align:center;
+}
